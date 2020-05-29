@@ -9,7 +9,7 @@ const routes = require('./routes'); //Import Routes
 const bodyParser = require('body-parser'); //Import body parser
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({extended: true}));//setting urlencoded
 app.use(routes); //Setting routes
